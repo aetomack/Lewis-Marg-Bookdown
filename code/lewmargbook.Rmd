@@ -9,6 +9,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+#importing libraries
+```{r}
+require(tidyverse)
+require(bookdown)
+require(readxl)
+```
+
+importing data
 ```{r}
 
 ```
