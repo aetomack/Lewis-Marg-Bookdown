@@ -16,7 +16,18 @@ require(bookdown)
 require(readxl)
 ```
 
-importing data
+#importing data
 ```{r}
+c1_1<-read_excel("../data/c1_1.xlsx")
+c1_2<-read_excel("../data/c1_2.xlsx")
+c1_3<-read_excel("../data/c1_3.xlsx")
+c1_4gdp<-read_excel("../data/c1_4gdp.xlsx")
+c1_4sturt<-read_excel("../data/c1_4sturt.xlsx")
+```
 
+#wrangling
+```{r}
+names(c1_1)<-c("Year", "Period", "Label", "Observation")
+c1_1<-c1_1[-(1:17),]
+c1_2<-c1_2[-(1:4),]
 ```
