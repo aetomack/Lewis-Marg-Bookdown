@@ -7,6 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
 ```
 
 #importing libraries
@@ -29,5 +30,14 @@ c1_4sturt<-read_excel("../data/c1_4sturt.xlsx")
 ```{r}
 names(c1_1)<-c("Year", "Period", "Label", "Observation")
 c1_1<-c1_1[-(1:17),]
-c1_2<-c1_2[-(1:4),]
+c1_2<-c1_2[-(1:5),]
+c1_2<-c1_2[-(30:31),]
+c1_3<-c1_3[-(1:11),]
+names(c1_3)<-c("Year", "Period", "Label", "Observation")
+```
+
+# chart 1_1 visualization
+```{r}
+c1_1%>%
+  ggplot(aes(x=Label, y=Observation))
 ```
